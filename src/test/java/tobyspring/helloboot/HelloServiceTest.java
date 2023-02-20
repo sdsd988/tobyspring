@@ -1,6 +1,5 @@
-package tobyspring.myboot;
+package tobyspring.helloboot;
 
-import org.assertj.core.api.Assert;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 

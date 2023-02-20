@@ -1,4 +1,4 @@
-package tobyspring.myboot;
+package tobyspring.helloboot;
 
 public class Hello {
 
