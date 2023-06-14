@@ -15,17 +15,18 @@ public class HelloController  {
     //컨트롤러의 역할 : 유저의 요청사항을 검증하는 것
 
     private final HelloService helloService;
-    private  ApplicationContext applicationContext;
 
 
-    public HelloController(HelloService helloService, ApplicationContext applicationContext) {
+    public HelloController(HelloService helloService) {
         this.helloService = helloService;
-        this.applicationContext = applicationContext;
     }
 
     @GetMapping("/hello")
     public String hello(String name){
-        return helloService.sayHello(Objects.requireNonNull(name));
+        if (name == null || name.trim().length()==0) throw new IllegalArgumentException();
+
+        return helloService.sayHello(name);
+
     }
 
 
