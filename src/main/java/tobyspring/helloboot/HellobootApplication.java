@@ -34,11 +34,12 @@ public class HellobootApplication {
         WebServer webServer = serverFactory.getWebServer(servletContext -> {
 
             servletContext.addServlet("frontcontroller", new HttpServlet() {
+
                 @Override
                 protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
                     //인증, 보안, 다국어, 공통 기능
                     if(req.getRequestURI().equals("/hello") && req.getMethod().equals(HttpMethod.GET.name())){
-                        String name = req.getParameter("name"); // 바인
+                        String name = req.getParameter("name"); // 바인딩
 
                         HelloController helloController = applicationContext.getBean(HelloController.class);
                         String ret = helloController.hello(name);
