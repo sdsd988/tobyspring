@@ -66,6 +66,5 @@ public class ConfigurationTest {
     static class Common{
 
     }
-    //Bean1 <-- Common
-    //Bean2 <-- Common
+
 }
