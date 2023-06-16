@@ -25,7 +25,7 @@ dependencies {
 	implementation 'io.paradoxical:hikari_2.12:1.0'
 
 	runtimeOnly( 'com.h2database:h2:2.1.214')
-//	implementation 'hikari-cp:hikari-cp:3.0.1'
+	implementation 'hikari-cp:hikari-cp:3.0.1'
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
